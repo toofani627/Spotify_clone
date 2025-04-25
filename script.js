@@ -3,7 +3,8 @@ let previousSelected = null;
 let songs;
 let currFolder
 async function get_songs(folder) {
-    let a = await fetch(`http://127.0.0.1:5500/${folder}/`)
+    let a = await fetch(`${folder}/`)
+    // console.log(a);
     currFolder = folder;
     let response = await a.text();
     let div = document.createElement('div');
@@ -75,7 +76,7 @@ const PlayMusic = (track, pause = false) => {
 }
 
 async function display_folder() {
-    let a = await fetch(`http://127.0.0.1:5500/songs/`)
+    let a = await fetch(`songs/`)
     let response = await a.text();
     // console.log(response);
     let div1 = document.createElement('div');
@@ -91,7 +92,7 @@ async function display_folder() {
 
         if (e.href.includes('/songs/')) {
             let folder = (e.href.split('/')[4]);
-            let a = await fetch(`http://127.0.0.1:5500/songs/${folder}/info.json`)
+            let a = await fetch(`songs/${folder}/info.json`)
             let response = await a.json();
             // console.log(response);
             let cardContainer = document.querySelector('.cardContainer')
@@ -228,15 +229,9 @@ async function main() {
 
 
     })
-
-
-    // load the playlist whenever card is clicked
-
-    
-    
-
-
-
+ 
 }
 
 main();
+
+console.log("jelly");
