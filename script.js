@@ -3,7 +3,7 @@ let previousSelected = null;
 let songs;
 let currFolder
 async function get_songs(folder) {
-    let a = await fetch(`${folder}/`)
+    let a = await fetch(`${folder}/`) // Changing
     // console.log(a);
     currFolder = folder;
     let response = await a.text();
