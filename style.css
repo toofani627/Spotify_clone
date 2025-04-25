@@ -1,0 +1,162 @@
+/*  Rubik font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+
+* {
+    margin: 0;
+    font-family: rubik;
+    font-weight: 700;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.container {
+    width: 100vw;
+    /* height: 100vh; */
+}
+
+.left {
+    width: 25vw;
+    transition: all ease 0.5s;
+    z-index: 100;
+}
+
+.left .home {
+    margin: 15px;
+    padding: 20px;
+    /*Uniform padding*/
+}
+
+.left .library {
+    margin: 15px;
+    padding: 20px;
+    font-family: rubik;
+    font-weight: 700;
+}
+
+.logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ham_close{
+    width: 40px;
+    display: none;
+    cursor: pointer;
+}
+
+.right {
+    width: 75vw;
+}
+
+.home ul li {
+    display: flex;
+    font-family: rubik;
+    font-weight: 700;
+    width: 20px;
+    margin-top: 15px;
+    gap: 15px;
+    list-style: none;
+}
+
+.heading {
+    gap: 25px;
+    width: 100%;
+    padding: 13px 14px;
+}
+
+.heading h1 {
+    font-size: 25px;
+}
+
+.songs_list {
+    padding: 12px 0px;
+    /* list-style:decimal; */
+    /* background-color: aqua; */
+    list-style: none;
+
+    height: 57vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+
+.songs_list ul li {
+    list-style: auto;
+    list-style: none;
+    /* background-color: rebeccapurple; */
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    justify-content: space-between;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1.7px solid rgb(196, 196, 196);
+    border-radius: 7px;
+    cursor:  pointer;
+}
+
+.songs_list ul li:hover {
+    background-color: rgb(62, 61, 61);
+}
+.library_li_info{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.songs_list ul li  .img1 {
+    width: 30px;
+    background-color: rgb(33, 0, 0);
+    border-radius: 8px;
+    padding: 10px;
+}
+.songs_list ul li  img.img2 {
+    width: 30px;
+    /* background-color: rgb(0 124 82); */
+    border-radius: 8px;
+    /* padding: 10px; */
+}
+
+
+
+.songs_list .info .song_name{
+    font-weight: 500;
+    font-size: 16px;
+}
+.songs_list .info .artist_name{
+    font-weight: 400;
+    margin-top: 2px;
+    font-size: 12px;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-size: 11px;
+    font-weight: 100;
+    position: absolute;
+    padding: 13px;
+    padding-top: 10px;
+    bottom: 20px;
+
+}
+
+.footer a {
+    color: #a3a3a3;
+    ;
+    text-decoration: none;
+}
+
+.library {
+    min-height: 74vh;
+    position: relative;
+}
